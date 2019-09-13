@@ -3,7 +3,9 @@ import 'package:http/http.dart' as http;
 import 'package:async/async.dart';
 const request = "https://api.hgbrasil.com.br/finance?format=jason&key=f4e857c0";
 
-main(){
+main() async {
+  http.Response response = await http.get(request);
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Container(),
